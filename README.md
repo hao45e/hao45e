@@ -11,10 +11,6 @@
 
 <br/>
 
-<img alt="3d contribution calendar" src="profile-3d-contrib/profile-night-view.svg" width="100%" />
-
-<br/>
-
 <img alt="profile details" src="profile-summary-card-output/transparent/0-profile-details.svg" width="100%" />
 
 <img alt="repos per language" src="profile-summary-card-output/transparent/1-repos-per-language.svg" width="49%" />
@@ -22,5 +18,13 @@
 
 <img alt="stats" src="profile-summary-card-output/transparent/3-stats.svg" width="49%" />
 <img alt="productive time" src="profile-summary-card-output/transparent/4-productive-time.svg" width="49%" />
+
+<br/><br/>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hao45e/hao45e/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/hao45e/hao45e/output/github-contribution-grid-snake.svg" />
+  <img alt="contribution snake animation" src="https://raw.githubusercontent.com/hao45e/hao45e/output/github-contribution-grid-snake-dark.svg" />
+</picture>
 
 </div>
