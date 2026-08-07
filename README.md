@@ -13,9 +13,6 @@
 
 <img alt="profile details" src="profile-summary-card-output/transparent/0-profile-details.svg" width="100%" />
 
-<img alt="repos per language" src="profile-summary-card-output/transparent/1-repos-per-language.svg" width="49%" />
-<img alt="most commit language" src="profile-summary-card-output/transparent/2-most-commit-language.svg" width="49%" />
-
 <img alt="stats" src="profile-summary-card-output/transparent/3-stats.svg" width="49%" />
 <img alt="productive time" src="profile-summary-card-output/transparent/4-productive-time.svg" width="49%" />
 
