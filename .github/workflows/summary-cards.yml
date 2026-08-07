@@ -12,7 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
@@ -21,3 +21,20 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           BRANCH_NAME: main
           UTC_OFFSET: 8
+
+      # 上一步会生成全部 60 种主题，只保留 README 实际用到的那种。
+      - name: Prune unused themes
+        env:
+          KEEP: transparent
+        run: |
+          git pull --rebase origin main
+          find profile-summary-card-output -mindepth 1 -maxdepth 1 -type d \
+            ! -name "$KEEP" -exec rm -rf {} +
+          rm -f profile-summary-card-output/README.md
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add -A
+            git commit -m "Prune unused summary card themes"
+            git push
+          fi
